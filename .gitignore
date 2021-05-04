@@ -1,0 +1,8 @@
+.idea
+__pycache__
+.coverage
+.pytest_cache
+venv
+cp_source
+cp_dest
+cp_py
