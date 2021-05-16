@@ -30,6 +30,12 @@ If some character descriptions are unknown, we use the already known encodings
 to generate a map `character description ->
 unicode hex representation`.
 
+From command line:
+
+    python3 codepage_formatter.py -u iso-8859-15 CP00923.txt -u cp1140 CP01140.txt CP01010.txt CP01147.txt
+
+Or programmatically:
+
     cp_formatter = CodepageFormatter()
     cp_formatter.retrieve_description_map()  # read the file description_map.json
     cp_formatter.update_description_map("iso-8859-15", "CP00923.txt")
@@ -41,4 +47,5 @@ And then use:
 
     mkdir cp_py
     cd cp_py
-    python3 -m gencodec.py ../cp_dest
+    wget https://raw.githubusercontent.com/python/cpython/main/Tools/unicode/gencodec.py
+    python3 -m gencodec ../cp_dest
